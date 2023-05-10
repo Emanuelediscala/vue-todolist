@@ -17,12 +17,14 @@
     <main>
         <div id="app" class="m-auto container text-center d-flex flex-column justify-content-center p-3">
             <div>
-                <input type="text" placeholder="inserisci la skill" >
-                <button class="mx-3">Add to the bag</button>
-            </div>
+                <input type="text" @keyUp.enter="addSkill" placeholder="inserisci la skill" v-model="newSkill">
+                <button @click="addSkill " class="mx-3">Add to the bag</button>
+            </div> 
             <div class="w-50 m-auto p-5">
                 <ul>
-                    <li v-for="(skills,index) in skillist">{{skills.Text}}</li>
+                    <li v-for="(skills,index) in skillist">{{skills.Text}} 
+                        <button class="m-2" :class="conditionColor(index)"  @click="changeState(index)">GOT</button>
+                        <button @click="removeSkill(index)">REMOVED</button></li>
                 </ul>
             </div>
         </div>
