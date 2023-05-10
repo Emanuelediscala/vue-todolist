@@ -22,8 +22,8 @@
             </div> 
             <div class="w-50 m-auto p-5">
                 <ul>
-                    <li v-for="(skills,index) in skillist">{{skills.Text}} 
-                        <button class="m-2" :class="conditionColor(index)"  @click="changeState(index)">GOT</button>
+                    <li :class="TextOverWritten(index)" v-for="(skills,index) in skillist">{{skills.Text}} 
+                        <button class="m-2" :class="conditionColor(index)" @click="changeState(index)">GOT</button>
                         <button @click="removeSkill(index)">REMOVED</button></li>
                 </ul>
             </div>

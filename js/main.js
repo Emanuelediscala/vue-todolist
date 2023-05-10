@@ -7,7 +7,7 @@ createApp({
             skillist:[
                 {Text:"Avere una bella dose di pazienza","done":false},
                 {Text:"Essere belli organizzati","done":false},
-                {Text:"Settare una buona UI di controllo","done":false}
+                {Text:"Settare una buona UI di controllo","done":true}
             ] 
             }
         },
@@ -24,19 +24,20 @@ createApp({
         },
         changeState(posizione) {
             this.skillist[posizione].done = !this.skillist[posizione].done;
-            if (this.skillist[posizione].done == false) {
-                this.verity = "red"
-            }
-            else {
-                this.verity = "green";
-            }
+            
         },
         conditionColor(posizione) {
             if (this.skillist[posizione].done == false) {
-                return "red"            }
+                return "red"           
+            }
             else {
                 return "green"
             }
-        }    
+        },
+        TextOverWritten(posizione) {
+            if (this.skillist[posizione].done == false) {
+                return "lined"
+            }
+        }
     }
 }).mount("#app")

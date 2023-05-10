@@ -15,3 +15,6 @@ ul {
 .red {
     background-color: red;
 }
+.lined {
+    text-decoration: line-through;
+}
