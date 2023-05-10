@@ -15,7 +15,17 @@
         <div>
     </header>
     <main>
-        div
+        <div id="app" class="m-auto container text-center d-flex flex-column justify-content-center p-3">
+            <div>
+                <input type="text" placeholder="inserisci la skill" >
+                <button class="mx-3">Add to the bag</button>
+            </div>
+            <div class="w-50 m-auto p-5">
+                <ul>
+                    <li v-for="(skills,index) in skillist">{{skills.Text}}</li>
+                </ul>
+            </div>
+        </div>
     </main>
     <footer></footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
